@@ -30,6 +30,7 @@
 }
 .tech-header{
   font-size: 3rem;
+  text-align:center;
 
 }
 
@@ -183,3 +184,8 @@
     }
   }
   
+  @media (max-width: 392px) {
+    .hide-on-mobile {
+        display: none;
+    }
+}
