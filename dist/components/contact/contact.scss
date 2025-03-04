@@ -1,0 +1,62 @@
+@use "../buttons/buttons.scss" ;
+@use '../../styles/variables' as *;
+
+.form-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top:15px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: blue;
+    outline: none;
+}
+
+.form-group .error-message {
+    color: red;
+    font-size: 12px;
+    
+    position: absolute;
+    bottom: -18px;
+}
+
+.form-group input.error, .form-group textarea.error {
+    border-color: red;
+}
+
+.form-group input.error + .error-message, .form-group textarea.error + .error-message {
+    display: block;
+}
+
+.btn-submit {
+    background: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 90%;
+    cursor: pointer;
+    border-radius: 5px;
+}

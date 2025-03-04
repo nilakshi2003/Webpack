@@ -1,0 +1,92 @@
+@use "../buttons/buttons.scss" ;
+@use '../../styles/variables' as *;
+
+.about {
+    padding: 100px 120px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  
+    &__content {
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  
+    &__image {
+      max-width: 50%;
+      height:350px;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+  
+    
+    &__header {
+      font-family: $font-playfair;
+      font-size: 64px;
+      color: $font-color-black;
+      font-weight: bold;
+      margin: 0px;
+    }
+    &__description{
+        font-family:$font-nunito;
+        font-size:24px;
+        color:$font-color-light;
+    }
+  }
+  
+  .about-image {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .about {
+      flex-direction: column-reverse;
+      text-align: center;
+      padding: 80px 50px;
+    }
+  
+    .about__content {
+      max-width: 100%;
+      align-items: center;
+    }
+  
+    .about__image {
+      max-width: 80%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about__header {
+      font-size: 48px;
+    }
+  
+    .about__image {
+      max-width: 60%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .about__header {
+      font-size: 36px;
+    }
+  
+    .about__image {
+      max-width: 50%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about__image {
+      display: none; /* Hides the image on small screens */
+    }
+  
+    .about__content {
+      max-width: 100%;
+    }
+  }
+  

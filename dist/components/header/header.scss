@@ -1,0 +1,80 @@
+@use '../../styles/variables' as *;
+.header {
+    padding: 12px 120px;
+    position: relative;
+
+    
+    &__component {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        font-family: $font-comfort;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: $font-color-black;
+        text-decoration: none;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 3rem;
+        font-family: $font-nunito;
+        font-weight: 400;
+        font-size: 1.125rem;
+        color: $font-color-black;
+        position:relative;
+        
+        
+        @media (max-width: 768px) {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background: white;
+            width: 100%;
+            text-align: center;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position:fixed;
+            z-index: 1000;
+        }
+
+        &.active {
+            display: flex;
+        }
+
+    }
+    @media (max-width:768px){
+        padding:12px 50px;
+    }
+}
+a.nav__link{
+    text-decoration: none;
+    color:$font-color-black;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+// Hamburger menu styles
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+
+    span {
+        width: 25px;
+        height: 3px;
+        background: $font-color-black;
+        transition: all 0.3s;
+    }
+
+    @media (max-width: 768px) {
+        display: flex;
+        
+    }
+}

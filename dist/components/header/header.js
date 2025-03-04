@@ -1,0 +1,1 @@
+export function loadHeader(){fetch("./components/header/header.html").then((e=>e.text())).then((e=>{document.body.insertAdjacentHTML("afterbegin",e);const t=document.getElementById("hamburger"),n=document.querySelector(".header__nav");t&&n&&t.addEventListener("click",(function(){n.classList.toggle("active")}))})).catch((e=>console.error("Error loading header:",e)))}

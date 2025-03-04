@@ -1,0 +1,86 @@
+@use "../buttons/buttons.scss";
+@use '../../styles/variables' as *;
+
+.form-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+    background: $primary-color; // Light grey background
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 40px;
+    transition: all 0.3s ease-in-out;
+   
+
+    &:hover {
+        box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+    }
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    label {
+        font-weight: bold;
+        color: #333; // Darker text for contrast
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+        width: 95%;
+        padding: 12px;
+        border: 2px solid #d1d1d1;
+        border-radius: 8px;
+        font-size: 16px;
+        background: white;
+        transition: all 0.3s ease-in-out;
+
+        &:focus {
+            border-color: #007bff;
+            box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.3);
+            outline: none;
+        }
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    .error-message {
+        color: red;
+        font-size: 12px;
+        position: absolute;
+        bottom: -18px;
+    }
+
+    input.error,
+    textarea.error {
+        border-color: red;
+    }
+}
+
+.btn-submit {
+   
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 98%;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background: #0056b3;
+        transform: scale(1.02);
+    }
+}

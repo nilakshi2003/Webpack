@@ -1,0 +1,51 @@
+@use '../../styles/variables';
+.btn{
+    border:0;
+    padding:10px 30px;
+    font-size:1rem;
+    font-family: variables.$font-roboto;
+    font-weight:500;
+    text-align:center;
+    color:variables.$font-color-black;
+    border-radius:120px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    &--primary{
+        background-color: variables.$secondary-color;
+        &:hover{
+            cursor:pointer;
+            background-color: #222;
+        color: #fff;
+        transform: scale(1.05);
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+       
+
+        }
+        
+    }
+    &--secondary{
+        background: transparent;
+    color: #222;
+    padding: 12px 24px;
+    border: 2px solid #222;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        &:hover{
+            background-color: #222;
+            color: #fff;
+            transform: scale(1.05);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+
+        }
+        
+
+    }
+}
+

@@ -1,0 +1,1 @@
+export function loadFooter(){fetch("./components/footer/footer.html").then((o=>o.text())).then((o=>{document.body.insertAdjacentHTML("beforeEnd",o)})).catch((o=>console.error("Error loading header:",o)))}
