@@ -1,6 +1,58 @@
 @use "../buttons/buttons.scss" ;
 @use '../../styles/variables' as *;
+.main-about{
+  display:flex;
+  flex-direction: column;
+  gap:3rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:50px;
+}
+.tech-stack-container {
+  width: 500px;  // Adjust width dynamically
+  max-width: 900px;  // Keep a max limit for responsiveness
+  overflow: hidden;
+  position: relative;
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;  // Center the container
+}
 
+.tech-stack {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  animation: scrollAnimation 10s linear infinite;
+}
+.tech-header{
+  font-size: 3rem;
+
+}
+
+/* Keyframes for seamless animation */
+@keyframes scrollAnimation {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-50%);
+  }
+}
+
+/* Ensure images are styled correctly */
+.tech-img {
+  width: 50px;
+  height: auto;
+}
+.tech-stack-wrapper{
+  display:flex;
+  gap:30px;
+}
+  
 .about {
     padding: 100px 120px;
     display: flex;
@@ -13,12 +65,32 @@
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      opacity: 0;
+        transform: translateX(-100px); // Start off-screen left
+        animation: slideInLeft 1s ease-out forwards;
+        animation-delay:1s;
     }
   
     &__image {
       max-width: 50%;
       height:350px;
-      transition: opacity 0.3s ease, transform 0.3s ease;
+      opacity: 0;
+      transform: translateX(100px); // Start off-screen right
+      animation: slideInRight 1s ease-out forwards;
+      animation-delay:1.5s;
+      position: relative;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 50%; // Soft rounded corners
+       
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.5);
+        }
     }
   
     
@@ -34,6 +106,27 @@
         font-size:24px;
         color:$font-color-light;
     }
+    @keyframes slideInLeft {
+      from {
+          opacity: 0;
+          transform: translateX(-100px);
+      }
+      to {
+          opacity: 1;
+          transform: translateX(0);
+      }
+  }
+  
+  @keyframes slideInRight {
+      from {
+          opacity: 0;
+          transform: translateX(100px);
+      }
+      to {
+          opacity: 1;
+          transform: translateX(0);
+      }
+  }
   }
   
   .about-image {
