@@ -15,7 +15,7 @@
       flex-direction: column;
       gap: 2rem;
       opacity: 0;
-        transform: translateX(-100px); // Start off-screen left
+        transform: translateX(-100px); 
         animation: slideInLeft 1s ease-out forwards;
   }
 
@@ -23,7 +23,7 @@
       max-width: 50%;
       height: 550px;
       opacity: 0;
-      transform: translateX(100px); // Start off-screen right
+      transform: translateX(100px); 
       animation: slideInRight 1s ease-out forwards;
       display:flex;
       gap:2rem;
