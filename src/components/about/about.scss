@@ -34,7 +34,7 @@
 
 }
 
-/* Keyframes for seamless animation */
+
 @keyframes scrollAnimation {
   from {
       transform: translateX(0);
@@ -44,7 +44,7 @@
   }
 }
 
-/* Ensure images are styled correctly */
+
 .tech-img {
   width: 50px;
   height: auto;
@@ -135,7 +135,7 @@
     height: 100%;
   }
   
-  /* Responsive Design */
+
   @media (max-width: 1024px) {
     .about {
       flex-direction: column-reverse;
